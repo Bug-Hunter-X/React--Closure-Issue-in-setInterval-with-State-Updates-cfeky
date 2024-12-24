@@ -1,0 +1,3 @@
+# React: Closure Issue in setInterval with State Updates
+This example demonstrates a common error when using setInterval within a React component to update state. Due to the nature of closures, the count variable inside the setInterval callback function refers to its value at the time of the function's creation, not its current value. Therefore, the counter will not increment correctly.
+The solution is to utilize the functional update form of useState.
